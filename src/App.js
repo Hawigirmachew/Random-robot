@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import CardList from './components/CardList';
+import Header from './components/Header';
+import SearchRobot from './components/SearchRobot';
+import { RobotProvider } from './context/RobotContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <RobotProvider>
+     <div className=" h-screen">
+     <Header/>
+     <SearchRobot/>
+     <CardList/>
     </div>
+   </RobotProvider>
   );
 }
 
